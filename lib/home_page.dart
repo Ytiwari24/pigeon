@@ -85,14 +85,43 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          body: const Column(
-            children: [
-              Expanded(
-                child: TabBarView(children: [
-                  ExplorePage()
-                ]),
-              ),
-            ],
+          body: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              children: [
+                SizedBox(
+                    height: 100,
+                    child: Center(
+                        child: Text(
+                      'Explore ALL Cards',
+                      style: TextStyle(
+                          color: white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ))),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      '1000 Cards',
+                      style: TextStyle(
+                          color: white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Sort By',
+                          style: TextStyle(color: white),
+                        ))
+                  ],
+                ),
+                const Expanded(
+                  child: TabBarView(children: [ExplorePage()]),
+                ),
+              ],
+            ),
           )),
     );
   }
