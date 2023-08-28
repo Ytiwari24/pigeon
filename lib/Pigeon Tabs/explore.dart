@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pigeon/constants/colors.dart';
+import 'package:pigeon/widgets/responsiveness.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
@@ -12,11 +13,24 @@ class ExplorePage extends StatelessWidget {
           Wrap(
             children: [
               for (int i = 0; i < 20; i++) ...[
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  height:300,
-                  width: 600,
-                  color: white.withOpacity(.5),
+                SizedBox(width:ResponsiveWidget.isSmallScreen(context)?180: 300,height: 400,
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(ResponsiveWidget.isSmallScreen(context)?10:20),
+                        height:300,
+                        width:ResponsiveWidget.isSmallScreen(context)?180: 200,
+                        color: white.withOpacity(.5),
+                    ),
+                    Text(
+                          'Card Name',
+                          style: TextStyle(color: white,fontSize: 18,fontWeight: FontWeight.w500),
+                        ),Text(
+                          'Price',
+                          style: TextStyle(color: white),
+                        )
+                    ],
+                  ),
                 ),
               ]
             ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pigeon/Pigeon%20Tabs/explore.dart';
 import 'package:pigeon/constants/colors.dart';
 
+import 'Widgets/responsiveness.dart';
+
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
@@ -86,7 +88,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           body: Padding(
-            padding: const EdgeInsets.all(15),
+            padding:  EdgeInsets.all(ResponsiveWidget.isSmallScreen(context)?5:15),
             child: Column(
               children: [
                 SizedBox(
