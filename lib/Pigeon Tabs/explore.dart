@@ -13,24 +13,16 @@ class ExplorePage extends StatelessWidget {
           Wrap(
             children: [
               for (int i = 0; i < 20; i++) ...[
-                SizedBox(width:ResponsiveWidget.isSmallScreen(context)?180: 300,height: 400,
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(ResponsiveWidget.isSmallScreen(context)?10:20),
-                        height:300,
-                        width:ResponsiveWidget.isSmallScreen(context)?180: 200,
-                        color: white.withOpacity(.5),
-                    ),
-                    Text(
-                          'Card Name',
-                          style: TextStyle(color: white,fontSize: 18,fontWeight: FontWeight.w500),
-                        ),Text(
-                          'Price',
-                          style: TextStyle(color: white),
-                        )
-                    ],
-                  ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: 300,
+                  width: 200,
+                  color: white.withOpacity(.5),
+                  child: Center(
+                      child: Text(
+                    '${i + 1}',
+                    style: const TextStyle(fontSize: 30, color: Colors.white),
+                  )),
                 ),
               ]
             ],

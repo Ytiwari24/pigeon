@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     getSharedPref();
 
     return GetMaterialApp(
-        title: 'Routing',
+        title: 'Pigeon',
         theme: ThemeData(
           // useMaterial3: true,
           scaffoldBackgroundColor: Colors.greenAccent,
