@@ -1,14 +1,6 @@
 import 'package:get/get.dart';
-import 'package:pdf/pdf.dart';
-
-
-
-
 
 class CustomValidator {
-
-
-
   static String? emailValidation(
       {required String value, required String text}) {
     if (value.isEmpty || value == "") {
