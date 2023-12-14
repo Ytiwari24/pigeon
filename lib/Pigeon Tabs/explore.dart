@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pigeon/constants/colors.dart';
 import 'package:pigeon/widgets/custom_widgets.dart';
 
@@ -21,14 +22,22 @@ class ExplorePage extends StatelessWidget {
                   Card(
                     elevation: 20,
                     child: Container(
-                      margin: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                              colors: [Colors.orange, Colors.purple]),
+                          color: white.withOpacity(.5),
+                          border: Border.all(color: black, width: 2)),
                       height: 300,
                       width: 200,
-                      color: white.withOpacity(.5),
                       child: Center(
                           child: Text(
-                        '${i + 1}',
-                        style: const TextStyle(fontSize: 30, color: Colors.white),
+                        'Pravind Bhardwaj',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.poppins(
+                            color: white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
                       )),
                     ),
                   ),
@@ -42,7 +51,6 @@ class ExplorePage extends StatelessWidget {
             style: TextStyle(
                 fontSize: 20, color: white, fontWeight: FontWeight.bold),
           ),
-          
         ],
       ),
     );
