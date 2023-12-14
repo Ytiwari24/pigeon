@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
+          endDrawer: const Drawer(),
           // backgroundColor: white.withOpacity(.01),
           appBar: PreferredSize(
             preferredSize:
@@ -55,26 +56,17 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: GradientText(
                   'P I G E O N',
-                  gradientDirection: GradientDirection.ltr,
+                  gradientType: GradientType.linear,
+                  gradientDirection: GradientDirection.btt,
                   style: GoogleFonts.poppins(
                       fontWeight: FontWeight.bold, fontSize: 30),
                   colors: const [
-                    Colors.white, Colors.green, Colors.white, Colors.green,
-                    // Colors.white, Colors.green, Colors.red, Colors.purple,
-                    // Colors.orange, Colors.white
-                    // Color(0xff9400D3),
-                    // Color(0xff4B0082),
-                    // Color(0xff0000FF),
-                    // Color(0xff00FF00),
-                    // Color(0xffFFFF00),98
-                    // Color(0xffFF7F00),
-                    // Color(0xffFF0000),
+                    Colors.white,
+                    Colors.red,
+                    Colors.white,
+                    Colors.purple,
                   ],
                 ),
-                //  Text(
-                //   'P I G E O N',
-
-                // ),
               ),
               actions: [
                 TextButton(
@@ -114,7 +106,8 @@ class HomePage extends StatelessWidget {
             ),
           ),
           body: Padding(
-            padding:  EdgeInsets.all(ResponsiveWidget.isSmallScreen(context)?5:15),
+            padding: EdgeInsets.all(
+                ResponsiveWidget.isSmallScreen(context) ? 5 : 15),
             child: Column(
               children: [
                 // SizedBox(

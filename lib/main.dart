@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         title: 'Pigeon',
         theme: ThemeData(
           // useMaterial3: true,
-          scaffoldBackgroundColor: Colors.greenAccent,
+          scaffoldBackgroundColor: Colors.green,
           // primarySwatch: Colors.blue,
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
           pageTransitionsTheme: const PageTransitionsTheme(builders: {
