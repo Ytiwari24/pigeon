@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pigeon/Pigeon%20Tabs/explore.dart';
 import 'package:pigeon/constants/colors.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 import 'Widgets/responsiveness.dart';
+import 'pages/login/login_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -70,7 +72,9 @@ class HomePage extends StatelessWidget {
               ),
               actions: [
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const LoginPage());
+                    },
                     child: const Text(
                       'Log In',
                       style: TextStyle(color: Colors.white),
