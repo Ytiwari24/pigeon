@@ -23,19 +23,19 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                   GradientText(
-                  'L O G I N',
-                  gradientType: GradientType.linear,
-                  gradientDirection: GradientDirection.btt,
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold, fontSize: 30),
-                  colors: const [
-                    // Colors.white,
-                    Colors.red,
-                    // Colors.white,
-                    Colors.purple,
-                  ],
-                ),
+                  GradientText(
+                    'L O G I N',
+                    gradientType: GradientType.linear,
+                    gradientDirection: GradientDirection.btt,
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold, fontSize: 30),
+                    colors: const [
+                      // Colors.white,
+                      Colors.red,
+                      // Colors.white,
+                      Colors.purple,
+                    ],
+                  ),
                   const SizedBox(height: 16.0),
                   TextFormField(
                     decoration: const InputDecoration(
