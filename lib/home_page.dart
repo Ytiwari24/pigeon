@@ -29,10 +29,10 @@ class HomePage extends StatelessWidget {
       length: tabs.length,
       child: Scaffold(
           endDrawer: const Drawer(),
-          // backgroundColor: white.withOpacity(.01),
+       
           appBar: PreferredSize(
             preferredSize:
-                const Size.fromHeight(100.0), // here the desired height
+                const Size.fromHeight(100.0), 
             child: AppBar(
               elevation: 0,
               // backgroundColor: transparentColor,
@@ -114,16 +114,7 @@ class HomePage extends StatelessWidget {
                 ResponsiveWidget.isSmallScreen(context) ? 5 : 15),
             child: Column(
               children: [
-                // SizedBox(
-                //     height: 100,
-                //     child: Center(
-                //         child: Text(
-                //       'Explore ALL Cards',
-                //       style: TextStyle(
-                //           color: white,
-                //           fontSize: 25,
-                //           fontWeight: FontWeight.bold),
-                //     ))),
+           
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

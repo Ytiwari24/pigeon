@@ -1,11 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-// import '../../../Controllers/responsiveness.dart';
-// import '../../../Inventory/inventoryModalController/InventoryController.dart';
-// import '../../../constants/sharedpreference.dart';
-// import '../../colors.dart';
-// import '../../custom_widgets.dart';
 import '../Widgets/custom_widgets.dart';
 import '../constants/colors.dart';
 import '../widgets/responsiveness.dart';

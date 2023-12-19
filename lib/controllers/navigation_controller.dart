@@ -1,8 +1,6 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../constants/shared_preferences.dart';
 
 class NavigationController extends GetxController {

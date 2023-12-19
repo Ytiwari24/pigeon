@@ -1,21 +1,12 @@
 import 'package:dotted_border/dotted_border.dart';
-// import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-// import 'package:revoo/Admin/admin_controller.dart';
-// import 'package:revoo/Widgets/validator.dart';
-
-// import '../../Widgets/colors.dart';
 import '../../Widgets/custom_text.dart';
 import '../../Widgets/custom_widgets.dart';
-// import '../../Widgets/text.dart';
 import '../../Widgets/validator.dart';
 import '../../Widgets/widgets.dart';
 import '../../constants/colors.dart';
-// import '../Controllers/super_admin_controller.dart';
-// import '../Widgets/custom_dropDown.dart';
-// import '../Widgets/snack_bar.dart';
 
 class AdminProfileForm extends StatefulWidget {
   const AdminProfileForm({Key? key}) : super(key: key);

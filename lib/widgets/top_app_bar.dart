@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../constants/colors.dart';
 import '../constants/navigation_instances.dart';
 import '../constants/shared_preferences.dart';
