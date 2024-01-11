@@ -32,7 +32,7 @@ class ExplorePage extends StatelessWidget {
                           gradient: LinearGradient(
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
-                              colors: [black, white,  black]),
+                              colors: [black, white, black]),
                           width: 4,
                         ),
                       ),
@@ -59,8 +59,9 @@ class ExplorePage extends StatelessWidget {
             style: TextStyle(
                 fontSize: 20, color: white, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
-            height: 300,
+          Container(
+            color: black,
+            height: 600,
             child: Center(
               child: ListView(
                 shrinkWrap: true,
@@ -82,7 +83,7 @@ class ExplorePage extends StatelessWidget {
                               color: white.withOpacity(.5),
                               border: Border.all(color: black, width: 2)),
                           height: 300,
-                          width: 200,
+                          width: 500,
                           child: Center(
                               child: Text(
                             'Pravind Bhardwaj',

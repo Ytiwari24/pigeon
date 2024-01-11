@@ -26,9 +26,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         title: 'Pigeon',
         theme: ThemeData(
-          // useMaterial3: true,
           scaffoldBackgroundColor: Colors.green,
-          // primarySwatch: Colors.blue,
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
           pageTransitionsTheme: const PageTransitionsTheme(builders: {
             TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
@@ -36,14 +34,6 @@ class MyApp extends StatelessWidget {
           }),
         ),
         debugShowCheckedModeBanner: false,
-        home: 
-        // SuperAdminDashboardLayout(
-        //   screen: 'SuperAdminDashboard',
-        // )
-
-        // AdminDashboardLayout(screen: 'adminDashboard')
-        HomePage()
-        );
+        home: HomePage());
   }
 }
-

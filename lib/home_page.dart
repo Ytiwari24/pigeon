@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pigeon/Pigeon%20Tabs/explore.dart';
+import 'package:pigeon/Pigeon%20Tabs/wedding_page.dart';
 import 'package:pigeon/constants/colors.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-
 import 'Widgets/responsiveness.dart';
 import 'pages/login/login_page.dart';
 
@@ -29,30 +29,11 @@ class HomePage extends StatelessWidget {
       length: tabs.length,
       child: Scaffold(
           endDrawer: const Drawer(),
-       
           appBar: PreferredSize(
-            preferredSize:
-                const Size.fromHeight(100.0), 
+            preferredSize: const Size.fromHeight(100.0),
             child: AppBar(
               elevation: 0,
-              // backgroundColor: transparentColor,
               leadingWidth: 250,
-              // leading: Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: TextFormField(
-              //     decoration: InputDecoration(
-              //         hintStyle: TextStyle(color: white),
-              //         suffixIcon: IconButton(
-              //             onPressed: () {},
-              //             icon: Icon(
-              //               Icons.search,
-              //               color: white,
-              //             )),
-              //         hintText: 'Search',
-              //         border: OutlineInputBorder(
-              //             borderSide: BorderSide(color: white))),
-              //   ),
-              // ),
               centerTitle: true,
               leading: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -87,25 +68,23 @@ class HomePage extends StatelessWidget {
                     )),
               ],
               bottom: PreferredSize(
-                preferredSize:
-                    const Size.fromHeight(50.0), // here the desired height
-                child: Center(
-                  child: TabBar(
-                      isScrollable: true,
-                      indicatorColor: white,
-                      labelStyle: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      unselectedLabelStyle: const TextStyle(fontSize: 16),
-                      tabs: [
-                        for (int i = 0; i < tabs.length; i++) ...[
-                          Tab(
-                            text: tabs[i],
-                          )
-                        ]
-                      ]),
-                ),
+                preferredSize: Size(MediaQuery.of(context).size.width,
+                    50), // here the desired height
+                child: TabBar(
+                    isScrollable: true,
+                    indicatorColor: white,
+                    labelStyle: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    unselectedLabelStyle: const TextStyle(fontSize: 16),
+                    tabs: [
+                      for (int i = 0; i < tabs.length; i++) ...[
+                        Tab(
+                          text: tabs[i],
+                        )
+                      ]
+                    ]),
               ),
             ),
           ),
@@ -114,27 +93,29 @@ class HomePage extends StatelessWidget {
                 ResponsiveWidget.isSmallScreen(context) ? 5 : 15),
             child: Column(
               children: [
-           
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      '1000 Cards',
-                      style: TextStyle(
-                          color: white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Sort By',
-                          style: TextStyle(color: white),
-                        ))
-                  ],
-                ),
-                const Expanded(
-                  child: TabBarView(children: [ExplorePage()]),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.end,
+                //   children: [
+                //     Text(
+                //       '1000 Cards',
+                //       style: TextStyle(
+                //           color: white,
+                //           fontSize: 18,
+                //           fontWeight: FontWeight.bold),
+                //     ),
+                //     TextButton(
+                //         onPressed: () {},
+                //         child: Text(
+                //           'Sort By',
+                //           style: TextStyle(color: white),
+                //         ))
+                //   ],
+                // ),
+                Expanded(
+                  child: TabBarView(children: [
+                    WeddingPage(),
+                    ExplorePage(),
+                  ]),
                 ),
               ],
             ),
